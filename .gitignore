@@ -1,0 +1,15 @@
+# Ignore VS Code settings
+.vscode/
+
+# Node Modules
+node_modules/
+
+# Environment Files
+.env
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Log Files
+*.log
