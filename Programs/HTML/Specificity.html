@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascade Algo</title>
+    <!-- <link rel="stylesheet" href="../CSS/Try.css"> -->
+    <style>
+        /* Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector */
+        h1 {
+            color: aqua;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .red {
+            color: red !important;
+        }
+
+        .purple {
+            color: purple;
+        }
+
+        /* [data-x=a] {
+                background-color: blueviolet;
+            } */
+
+
+        .Universal {
+            background-color: violet;
+            color: white;
+            width: 150px;
+        }
+
+        .Element {
+            background-color: aqua;
+            color: rgb(107, 30, 250);
+            width: 290px;
+        }
+
+        .class {
+            background-color: cornflowerblue;
+            color: chartreuse;
+            width: 400px;
+        }
+
+        .ID {
+            background-color: darkorange;
+            color: white;
+            width: 120px;
+        }
+
+        .Inline {
+            background-color: deeppink;
+            color: white;
+            width: 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 class="yellow red purple" data-x="a">Hello World!</h1>
+
+        <h2>Specificity Calculation</h2>
+        <p>To calculate specificity, assign a value to each part of the selector:</p>
+
+        <ol>
+            <li type="none" class="Universal"><b>Universal Selector:</b> 0</li>
+            <li type="none" class="Element"><b>Element selectors and pseudo-elements:</b> 1</li>
+            <li type="none" class="class"><b>Class selectors, attribute selectors, and pseudo-classes:</b> 10</li>
+            <li type="none" class="ID"><b>ID selectors:</b> 100</li>
+            <li type="none" class="Inline"><b>Inline styles:</b> 1000</li>
+
+        </ol>
+    </div>
+</body>
+
+</html>
