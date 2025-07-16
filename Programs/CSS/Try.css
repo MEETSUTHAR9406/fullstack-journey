@@ -1,0 +1,15 @@
+h2, h4, h6 {
+    color: red;
+    background-color: yellow ;
+}
+
+h1, h3, h5 {
+    color: chocolate;
+    background-color: black;
+}
+
+ol {
+    list-style: none;
+    display: flex;
+}
+
