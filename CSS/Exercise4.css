@@ -1,5 +1,5 @@
 :root {
-    --color: rgb(206, 206, 250);
+    --color: #b7dee2;
     --textcolor: white;
     --seccolor: black;
 }
@@ -17,6 +17,7 @@ body {
 nav {
     background-color: var(--seccolor);
     padding: 12px 0;
+    background-color: #40b5c2;
 }
 
 ul li {
@@ -24,9 +25,15 @@ ul li {
     display: inline;
     padding: 23px;
     font-weight: bolder;
+    color: var(--textcolor);
 }
 
 ui li a {
     color: var(--seccolor);
+    text-decoration: none;
+}
+
+a {
+    color:white;
     text-decoration: none;
 }
