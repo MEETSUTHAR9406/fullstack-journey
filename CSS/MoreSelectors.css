@@ -1,0 +1,52 @@
+/* .box:first-child {
+    background-color: red;
+} */
+
+/* .box::first-line {
+    color: yellow;
+} */
+
+/* .boxes * {
+    display: inline;
+    color: blue;
+    border: 2px solid black;
+}
+
+.box, [data-color="primary"] {
+    margin-top: 45px;
+    padding-top: 45px;
+} */
+
+/* .box:nth-child(odd) {
+    background-color: blue;
+} */
+
+/* .box:nth-last-child(2) {
+    background-color: red;
+} */
+
+.boxes::before {
+    content: "Web Dev is good";
+    color: red;
+}
+
+.boxes::after {
+    content: "Web Dev is good";
+    color: blue;
+}
+
+.boxes::selection {
+    background-color: blue;
+    color: white;
+}
+
+.box::first-letter {
+    color: peru;
+    text-transform: lowercase;
+    font-size: 45px;
+}
+
+input::placeholder {
+    color: rgb(96, 76, 76);
+    /* font-size: 34px; */
+}
