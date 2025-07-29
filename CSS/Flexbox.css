@@ -1,0 +1,48 @@
+.container {
+    border: 2px solid red;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+
+    /* We use align-items if there is only one row */
+    align-items: center;
+    flex-wrap: wrap;
+
+    /* We use if there more than one row. */
+    /* align-content: center; */
+    flex-flow: row wrap;
+    /* flex-direction: column-reverse ; */
+    /* flex-direction: row-reverse; */
+    gap: 40px 10px;
+    /* row-gap: 40px;
+    column-gap: 10px; */
+}
+
+.item {
+    display: flex;
+    /* flex-grow: 1; */
+    text-align: center;
+    height: 92px;
+    width: 92px;
+    background-color: rgb(103, 220, 35);
+    border: 2px solid black;
+    /* margin: 4px; */
+}
+
+.item1 {
+    /* flex-grow: 50; */
+    /* flex-shrink: 2; */
+    align-self: flex-end;
+}
+
+.order1 {
+    order: 100;
+}
+
+.order2 {
+    order: 90;
+}
+
+.order3 {
+    order: 98;
+}
