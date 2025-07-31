@@ -1,12 +1,28 @@
 .container {
-    padding: 3px;
+    /* padding: 3px; */
     border: 2px solid red;
     display: grid;
-    grid-template-columns: 120px 100px;
+    grid-template-columns: [first] 120px [second] 100px [third];
+    grid-template-rows: 100px 100px 100px;
 }
 
 .items {
     border: 2px solid blue;
     height: 55px;
     width: 55px;
+}
+
+.item-4 {
+    grid-row: 1/2;
+    /* grid-row-start: 1; */
+    /* grid-row-end: 2; */
+
+    grid-column: 1/third;
+    /* grid-column-start: 1; */
+    /* grid-column-end: 2; */
+}
+
+.item-1 {
+    grid-row: second/third;
+    grid-column: second/third;
 }
