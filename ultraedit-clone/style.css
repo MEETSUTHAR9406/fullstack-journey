@@ -23,6 +23,12 @@ nav {
     /* gap: 30px; */
 }
 
+.items {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
 .hello {
     display: flex;
     list-style: none;
