@@ -3,7 +3,6 @@
     width: 90vw;
     height: 40vw;
     position: relative;
-    font-size: 100px;
 }
 
 .box {
@@ -14,24 +13,23 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    /* transition: all 3s ease-in-out 1s; */
-    animation: identifier 3s ease-in-out;
+    animation: animateX 3s linear infinite, animateY 5s ease-in-out infinite alternate;
+}
+ 
+@keyframes animateX {
+    from {
+        left: 0;
+    }
+    to {
+        left: 95%;
+    }
 }
 
-@keyframes identifier {
-    0% {
-        transform: translate(0, 0);
+@keyframes animateY {
+    from {
+        bottom: 0;
     }
-    25% {
-        transform: translateY(-35vw);
-    }
-    50% {
-        transform: translate(0, 0);
-    }
-    75% {
-        transform: translate(85vw, 0);
-    }
-    100% {
-        transform: translate(0, 0);
+    to {
+        bottom: 95%;
     }
 }
