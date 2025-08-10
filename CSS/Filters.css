@@ -1,0 +1,15 @@
+/* img {
+    filter: blur(10px);
+} */
+
+.img1 {
+    filter: brightness(150%) contrast(0.5);
+}
+
+.img2 {
+    filter: grayscale(1);
+}
+
+.img3 {
+    filter: invert(1);
+}
