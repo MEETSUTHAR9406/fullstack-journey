@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url(http://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/IN-en-20250721-TRIFECTA-perspective_cadc8408-df6e-4313-a05d-daa9dcac139f_large.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content:space-between;
+    padding-top: 1px;
+    /* align-items: center; */
+    padding: 24px 0 0 127px;
+}
+
+.logo {
+    width: 9.25rem;
+    height: 2.5rem;
+    margin-left: 21px;
+    gap: 10px;
+}
+
+nav div{
+    display: flex;
+    gap: 10px;
+    /* margin-left: 100px;
+    margin-right: 250px;
+    height: 20px; */
+}
+
+.btn {
+    border: 1px solid white;
+    background-color: black;
+    color: white; 
+    cursor: pointer;
+    border-radius: 10px;   
+}
+
+.sign-in-btn {
+    background-color: #e50914;
+    border: none;
+    padding: px;
+    width: 5.5rem;
+    height: 1.5rem;
+}
+
+.language-btn {
+    padding: 15px;
+    
+}
+
+@media (min-width: 768px) {
+    nav {
+        max-width: 80vw;
+        height: 80px;
+    }
+
+    .logo {
+        width: 9.25rem;
+    }
+
+    .btn {
+        /* padding: 8px 12px; */
+        font-size: 1rem;
+    }
+}
