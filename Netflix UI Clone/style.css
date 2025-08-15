@@ -14,6 +14,7 @@ body {
 .main {
     background-image: url(http://assets.nflxext.com/ffe/siteui/vlv3/258d0f77-2241-4282-b613-8354a7675d1a/web/IN-en-20250721-TRIFECTA-perspective_cadc8408-df6e-4313-a05d-daa9dcac139f_large.jpg);
     background-size: cover;
+    background-position: -8px 15%;
     background-repeat: no-repeat;
     height: 100vh;
     position: relative;
@@ -31,33 +32,29 @@ body {
 }
 
 nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
     position: relative;
+    height: 92px;   
     z-index: 2;
     max-width: 80vw;
     margin: 0 auto;
-
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    /* padding-top: 1px; */
-    /* align-items: center; */
-    /* padding: 24px 0 0 127px; */
-    height: 92px;
-    padding-top: 15px;
+    padding-top: 15px; 
 }
 
 .logo {
     width: 9.25rem;
     height: 2.5rem;
-    /* margin-left: 21px; */
     gap: 10px;
 }
 
 nav div{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     gap: 10px;
-    margin-right: 7px;
+    margin-right: 0;
 }
 
 .btn {
@@ -72,29 +69,44 @@ nav div{
     background-color: #e50914;
     border: none;
     color: white;
-    height: 4.7vh; 
-    padding: 7px 17px;
+    height: 32px;
+    padding: 0 10px 0 10px;
     font-weight: 500;
     font-size: 0.9rem;
     line-height: normal;
     cursor: pointer;
-    width: 5.4vw;
-    border-radius: 5px;
-    font-size: 0.9rem;
+    max-width: 74px;
+    width: auto;
+    border-radius: 4px;
 }
 
 #languages {
-    height: 4.7vh; 
-    padding: 1px;
-    width: 8vw;
+    appearance: none;
+    height: 32px; 
+    padding: 0 15px 0 15px;
+    width: 120px;
+    min-width: 90px;
     text-align: center;
-    /* border: 1px solid #aaa; */
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
+    font-size: 1rem;
+    /* margin-bottom: 4px; */
+}
+
+.language-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.btn #languages {
+    font-family: inherit;
+    font-size: 1rem;
+    height: 32px;
+    border-radius: 4px;
+    outline: none;
 }
 
 @media (min-width: 768px) {
@@ -106,17 +118,13 @@ nav div{
     .logo {
         width: 9.25rem;
     }
-
-    .btn {
-        /* padding: 8px 12px; */
-        /* font-size: 1rem; */
-    }
 }
 
-#languages:active { 
-    border: 3px solid white;
+#languages:focus { 
+    outline: 2px solid white;
 }
 
+.sign-in-btn:hover,
 .sign-in-btn:active {
-    background-color: #96393e;
+    background-color: #f40612;
 }
