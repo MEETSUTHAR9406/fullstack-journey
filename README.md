@@ -30,6 +30,11 @@ Here, I'm documenting my progress as I learn and build projects using:
 
 ---
 
+## What i did
+
+- Made a nav-bar + some body clone of the website **Ultraedit**.
+- Almost cloned nav-bar of **Netflix**. Working for whole UI.
+
 ## Upcoming
 
 - Add React folder with basic setups  
