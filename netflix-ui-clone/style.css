@@ -207,6 +207,13 @@ nav div {
     transition: background-color 0.2s ease-in-out;
 }
 
+.check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+}
+
 .login .check:hover {
     background-color: #c11119;
 }
