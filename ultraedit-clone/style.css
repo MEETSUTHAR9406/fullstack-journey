@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --bgcolor: rgb(243, 243, 243, 1);
-    --bgbtn: #5cb85c;
+    --bgcolor: #F9F9F9;
+    --bgbtn: #5CB85C;
     --btntext: #fff
+    --age: blue;
+    --txt-color: #FFFFFF;
+    --font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* --- Header & Navigation --- */
@@ -40,7 +39,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 4px;
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-family);
     cursor: pointer;
 }
 
@@ -56,9 +55,11 @@ nav {
 }
 
 .buy {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--font-family);
     padding: 10px 20px;
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 14px;
     cursor: pointer;
     text-align: center;
     border: 2px solid black;
@@ -107,7 +108,7 @@ span {
     max-width: 327px;
     height: auto;
     padding: 16px;
-    background-color: #00b6d1;
+    background-color: #09A6BD;
     color: rgb(255, 255, 255);
     border-style: none;
     font-weight: bolder;    
@@ -157,6 +158,7 @@ span {
 
 .grids .item:nth-child(1) .btn1 {
     margin-top: 70px; 
+    color: var(--txt-color);
 }
 
 .grids .item p:first-of-type {
@@ -187,6 +189,7 @@ span {
     margin-top: 27px;
     margin-bottom: 0;
     border: none;
+    color: var(--txt-color);
 }
 
 .grids .item .text1-3 {
@@ -237,4 +240,44 @@ span {
     .grids {
         grid-template-columns: 1fr;
     }
+
+    .black {
+        max-width: 90%;
+        padding: 8px;
+    }
+}
+
+.grid-black {
+    display: grid;
+    background-color: #222222;
+    height: 70vh;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-black .block {
+    background-color: var();
+}
+
+.grid-black .join {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: var(--txt-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.grid-black .sign {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: var(--txt-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
 }
