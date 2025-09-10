@@ -3,8 +3,7 @@
 :root {
     --bgcolor: #F9F9F9;
     --bgbtn: #5CB85C;
-    --btntext: #fff
-    --age: blue;
+    --btntext: #fff --age: blue;
     --txt-color: #FFFFFF;
     --font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -43,6 +42,14 @@ nav {
     cursor: pointer;
 }
 
+.center .items span {
+    transition: color 0.3s ease;
+}
+
+.center .items span:hover {
+    color: #858889;
+}
+
 .right {
     display: flex;
     align-items: center;
@@ -52,6 +59,16 @@ nav {
 .right .item {
     font-weight: bold;
     cursor: pointer;
+}
+
+.right .buy p,
+.right .item p {
+    transition: color 0.3s ease;
+}
+
+.right .buy p:hover,
+.right .item p:hover {
+    color: #858889;
 }
 
 .buy {
@@ -85,10 +102,6 @@ main {
     height: auto;
 }
 
-span {
-    font-weight: 700;
-}
-
 .next {
     font-size: 20px;
     text-align: center;
@@ -111,9 +124,13 @@ span {
     background-color: #09A6BD;
     color: rgb(255, 255, 255);
     border-style: none;
-    font-weight: bolder;    
+    font-weight: bolder;
     border-radius: 7px;
     font-size: 1em;
+}
+
+.btn button {
+    transition: background-color 0.4s ease;
 }
 
 .btn button:hover {
@@ -161,7 +178,7 @@ span {
 }
 
 .grids .item:nth-child(1) .btn1 {
-    margin-top: 70px; 
+    margin-top: 70px;
     color: var(--txt-color);
 }
 
@@ -202,7 +219,8 @@ span {
     margin-top: 10px;
 }
 
-.grids .item .text1-2, .grids .item .text2-2 {
+.grids .item .text1-2,
+.grids .item .text2-2 {
     font-size: 8px;
     font-weight: 100;
     word-break: break-all;
@@ -238,7 +256,7 @@ span {
     }
 
     .next {
-            font-size: 16px;
+        font-size: 16px;
     }
 
     .grids {
@@ -344,6 +362,10 @@ span {
     transition: background-color 0.2s;
 }
 
+.newsletter-form button {
+    transition: background-color 0.4s ease;
+}
+
 .newsletter-form button:hover {
     background-color: #007f91;
 }
@@ -357,7 +379,7 @@ span {
     padding-right: 2rem;
 }
 
-.content-container h2, 
+.content-container h2,
 .content-container p:nth-child(4) {
     font-size: 24px;
     font-weight: 400;
@@ -386,42 +408,71 @@ span {
 
 .last-content {
     margin: 50px auto;
-    max-width: 1100px;
+    max-width: 1300px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    gap: 20px;
+    text-align: left;
+    padding: 1.25rem;
 }
 
-.language {
-    font-family: var(--font-family);
+.last-content p {
     font-weight: 700;
-    font-size: 1rem;
-    line-height: 1.313rem;
+    margin-bottom: 0.625rem;
+    font-size: 16px;
 }
 
-.what-you-need {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 1rem;
+.last-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
 }
 
-.user-type {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 1rem;
+.last-content ul li {
+    margin-bottom: 0.5rem;
+    font-weight: 400;
 }
 
-.general {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 1rem;
+.subscribe-newsletter p:last-of-type {
+    font-weight: 400;
+    margin-bottom: 0.625rem;
 }
 
-.subscribe-newsletter {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 1rem;
+.subscribe-newsletter input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.subscribe-newsletter button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(0, 182, 209);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.subscribe-newsletter button {
+    transition: background-color 0.4s ease;
+}
+
+.subscribe-newsletter button:hover {
+    background-color: #007f91;
+}
+
+@media screen and (max-width: 900px) {
+    .last-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .last-content {
+        grid-template-columns: 1fr;
+    }
 }
