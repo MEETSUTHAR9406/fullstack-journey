@@ -439,11 +439,11 @@ main {
 
 @media (max-width: 992px) {
     nav {
-        padding: 1.25rem;
+        padding: 1.25rem; /* 20px */
     }
     
     .nav-links {
-        display: none; /* Hide nav links by default */
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -487,7 +487,7 @@ main {
     }
     
     .menu-toggle:checked ~ .nav-links {
-        display: flex; /* Show menu when checkbox is checked */
+        display: flex; 
     }
 
     /* Animate hamburger to an 'X' */
