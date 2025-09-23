@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
 :root {
-    --btn-color: #e50914;
-    --primary-text-color: rgb(255, 255, 255);
-    --font-family: 'Roboto', "Helvetica Neue", "Segoe UI", "Netflix Sans", Ubuntu, sans-serif;
+    --brand-red: #E50914;
+    --brand-red-hover: #C11119;
+    --primary-text-color: #FFFFFF;
+    --font-family: 'Roboto', "Helvetica Neue", "Segoe UI", sans-serif;
 }
 
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -16,19 +16,20 @@
 }
 
 body {
-    background-color: black;
+    background-color: #000000;
     color: var(--primary-text-color);
 }
 
+/* --- Hero Section --- */
 .main {
-    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/8d617e19-3c3c-4c28-8998-c9b14dbc7200/web/IN-en-20250901-TRIFECTA-perspective_48d84d4e-9558-46b8-a0f3-8b2dc8478431_large.jpg);
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/c95abc7a-8124-4630-bb7a-3b160bdc6de3/web/IN-en-20250915-TRIFECTA-perspective_d3d87aa7-58ed-4c6b-98dc-231ed05ba675_large.jpg);
     background-size: cover;
     background-position: center center;
-    background-repeat: no-repeat;
     height: 100vh;
     position: relative;
 }
 
+/* Background overlay for better text readability */
 .main::before {
     content: "";
     position: absolute;
@@ -36,17 +37,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
+/* --- Navigation Bar --- */
 nav {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    height: 92px;
+    height: 90px;
     z-index: 2;
     max-width: 1200px;
     padding: 0 32px;
@@ -58,51 +59,40 @@ nav {
     height: 40px;
 }
 
-nav div {
+.nav-buttons {
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
 .btn {
-    border: 1px solid white;
-    background-color: black;
-    color: white;
+    border: none;
     cursor: pointer;
     border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .sign-in-btn {
-    background-color: var(--btn-color);
-    border: none;
-    color: white;
+    background-color: var(--brand-red);
+    color: var(--primary-text-color);
     padding: 8px 16px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .sign-in-btn:hover {
-    background-color: #ca0000;
+    background-color: var(--brand-red-hover);
 }
 
 #languages {
-    height: 32px;
-    padding: 0 15px;
-    border-radius: 5px;
+    padding: 6px 12px;
+    border-radius: 4px;
     background: rgba(0, 0, 0, 0.7);
     border: 1px solid rgba(128, 128, 128, 0.7);
-    color: white;
-    font-weight: 400;
-    font-size: 0.9rem;
+    color: var(--primary-text-color);
 }
 
-.language-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
+/* --- Hero Content --- */
 .content {
     z-index: 2;
     position: relative;
@@ -111,54 +101,43 @@ nav div {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: calc(100vh - 92px);
+    height: calc(100vh - 90px); /* Adjust height based on nav height */
     padding: 0 24px;
 }
 
-.content .text1,
-.content .text2 {
-    font-size: 3.6rem;
+.content h1 {
+    font-size: 3.5rem;
     font-weight: 900;
-    color: var(--txt-color);
-    margin-bottom: 2px;
-    font-family: var(--font);
-    font-style: normal;
-    letter-spacing: 1px;
-    line-height: 70px;
+    line-height: 1.1;
 }
 
-.content .text3 {
+.content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1rem;
+}
+
+.content p {
     font-size: 1.2rem;
-    margin-top: 13px;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    font-family: var(--font);
-    font-weight: 600;
+    margin-top: 1.5rem;
+    max-width: 650px;
 }
 
-.content .price {
-    font-size: 1.0rem;
-    margin-bottom: 15px;
-}
-
-.content .check {
-    background-color: var(--btn-color);
-    color: var(--txt-color);
-}
-
-.login {
+/* Email Form */
+.email-form {
     display: flex;
     gap: 8px;
     justify-content: center;
     align-items: center;
     width: 100%;
     max-width: 580px;
+    margin-top: 1.5rem;
 }
 
-.login input {
+.email-form input {
     flex-grow: 1;
     height: 56px;
-    padding: 16px;
+    padding: 0 16px;
     font-size: 1rem;
     color: var(--primary-text-color);
     background-color: rgba(22, 22, 22, 0.7);
@@ -166,64 +145,127 @@ nav div {
     border-radius: 4px;
 }
 
-.login input::placeholder {
-    color: #ccc;
-}
-
-.login .check {
-    background-color: var(--btn-color);
+.get-started-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--brand-red);
     color: var(--primary-text-color);
     height: 56px;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     border: none;
     border-radius: 4px;
     padding: 0 24px;
     cursor: pointer;
-    white-space: nowrap;
+    white-space: nowrap; /* Prevents button text from wrapping */
     transition: background-color 0.2s ease-in-out;
 }
 
-.check {
+.get-started-btn:hover {
+    background-color: var(--brand-red-hover);
+}
+
+.get-started-btn .material-symbols-outlined {
+    font-size: 1.5rem;
+}
+
+/* --- Separator --- */
+.separator {
+    height: 8px;
+    background-color: #232323;
+}
+
+/* --- Trending Section --- */
+.trending-section {
+    padding: 48px 32px;
+}
+
+.trending-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.movies-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.9rem;
+    gap: 10px;
+    overflow-x: auto; /* Enables horizontal scroll */
+    padding-bottom: 20px; /* Space for scrollbar */
+}
+/* Hiding the scrollbar for a cleaner look */
+.movies-container::-webkit-scrollbar {
+    display: none;
 }
 
-.login .check:hover {
-    background-color: #c11119;
+.movie-card {
+    min-width: 200px;
+    height: 300px;
+    background-color: #232323;
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+/* --- Responsive Design (Media Queries) --- */
+
+/* For Tablets and smaller desktops */
 @media (max-width: 960px) {
-    .content .text1,
-    .content .text2 {
-        font-size: 2rem;
+    .content h1 {
+        font-size: 2.5rem;
     }
-
-    .content .text3 {
-        font-size: 1.125rem;
+    .content h2 {
+        font-size: 1.2rem;
     }
-
-    .content .price {
-        font-size: 1.125rem;
-    }
-
-    .login {
+    .email-form {
         flex-direction: column;
         max-width: 450px;
-        margin: 0 auto;
+        margin: 1.5rem auto 0;
     }
-
-    .login input,
-    .login .check {
+    .email-form input,
+    .get-started-btn {
         width: 100%;
     }
-
-    .login .check {
+    .get-started-btn {
         font-size: 1.125rem;
         margin-top: 1rem;
-        padding: 16px;
+        padding: 12px;
         height: auto;
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 576px) {
+    nav {
+        padding: 0 16px;
+    }
+    .logo {
+        width: 100px;
+    }
+    .sign-in-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    #languages {
+        padding: 4px 8px;
+    }
+    .content {
+        padding: 0 16px;
+    }
+    .content h1 {
+        font-size: 1.8rem;
+    }
+    .content h2 {
+        font-size: 1.1rem;
+    }
+    .content p {
+        font-size: 1rem;
+    }
+    .get-started-btn .material-symbols-outlined {
+        display: none; /* Hide arrow on small screens */
     }
 }
