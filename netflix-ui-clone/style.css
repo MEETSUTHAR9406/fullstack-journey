@@ -328,7 +328,7 @@ nav {
     .movie-card .rank {
         font-size: 8rem;
         -webkit-text-stroke: 3px #b0b0b0;
-        text-stroke: 3px #b0b0b0;
+        /* text-stroke: 3px #b0b0b0; */
     }
 
     .movie-card .poster {
