@@ -193,10 +193,10 @@ nav {
 
 .movies-container {
     display: flex;
-    gap: 10px;
+    gap: 40px;
     overflow-x: auto;
     /* Enables horizontal scroll */
-    padding-bottom: 20px;
+    padding-bottom: 20px 32px;
     /* Space for scrollbar */
     align-items: flex-end;
 }
@@ -220,10 +220,10 @@ nav {
 }
 
 .movie-card .rank {
-    font-size: 12rem;
+    font-size: 9rem;
     font-weight: 800;
     color: #000;
-    -webkit-text-stroke: 4px #b0b0b0;
+    -webkit-text-stroke: 3px #b0b0b0;
     /* text-stroke: 4px #b0b0b0; */
     z-index: 1;
 }
@@ -240,7 +240,7 @@ nav {
 }
 
 .movie-card:hover .poster {
-    transform: translateX(-35px) scale(1.1);
+    transform: translateX(-35px) scale(1);
 }
 
 .movie-card:hover {
