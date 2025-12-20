@@ -1,16 +1,55 @@
-name = 'Meet Suthar'
-console.log(name)
+// Question...1
 
-age = 24
-console.log(age)
+/*
+let num = Number(prompt("Enter your number: "));
 
-x = null;
-console.log(x)
+if(num % 5 === 0) {
+    console.log("Your number is multiple of 5.");
+} else  {
+    console.log("Your number is not a multiple of 5.");
+}
+*/
 
-y = undefined
-console.log(y)
+// Question...2
 
-bool = true
-console.log(bool)
+/*
+let num = Number(prompt("Enter your number: "));
 
-console.log(typeof bool)
+if (num < 0 || num > 100) {
+  console.log("Please enter a valid number between 0 and 100.");
+} else if (num >= 80) {
+  console.log("You got A grade.");
+} else if (num >= 70) {
+  console.log("You got B grade.");
+} else if (num >= 60) {
+  console.log("You got C grade.");
+} else if (num >= 50) {
+  console.log("You got D grade.");
+} else {
+  console.log("You got F grade.");
+}
+*/
+
+// Question...3
+
+/*
+for(let i = 0; i <= 100; i++) {
+  if(i % 2 == 0) {
+    console.log(i);
+  }
+}
+*/
+
+// Question...4
+
+let gameNum = 94;
+
+let guessedNum = Number(prompt("Guess the number between 0 to 100: "));
+
+if (guessedNum > 100 || guessedNum < 0) {
+  console.log("Only guess numbers between 0 to 100.");
+} else if (guessedNum === gameNum) {
+  console.log("You guessed correct! ", guessedNum, " is the correct number.");
+} else {
+  console.log("You guessed wrong! Try again.");
+}
