@@ -42,6 +42,7 @@ for(let i = 0; i <= 100; i++) {
 
 // Question...4
 
+/*
 let gameNum = 94;
 
 let guessedNum = Number(prompt("Guess the number between 0 to 100: "));
@@ -53,3 +54,12 @@ if (guessedNum > 100 || guessedNum < 0) {
 } else {
   console.log("You guessed wrong! Try again.");
 }
+*/
+
+
+// Question...5
+
+let fullName = String(prompt("Enter your full name: "));
+let username = "@" + fullName + fullName.length;
+
+console.log(username);
