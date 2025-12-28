@@ -56,10 +56,55 @@ if (guessedNum > 100 || guessedNum < 0) {
 }
 */
 
-
 // Question...5
 
+/*
 let fullName = String(prompt("Enter your full name: "));
 let username = "@" + fullName + fullName.length;
 
 console.log(username);
+*/
+
+// Question...6
+
+/*
+let marks = [85, 97, 44, 37, 76, 60];
+
+let avg = 0;
+for(let i = 0; i < marks.length; i++) {
+  avg += marks[i] / marks.length; 
+}
+
+console.log(avg);
+*/
+
+// Question...7
+
+/*
+let prices = [250, 645, 300, 900, 50];
+
+let offer = 0;
+for (let i = 0; i < prices.length; i++) {
+  offer = (prices[i] * 10) / 100;
+  prices[i] = prices[i] - offer;  
+}
+
+for(let price in prices) {
+  console.log(prices[price]);
+}
+*/
+
+
+// Question...7
+
+let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+console.log(companies);
+
+companies.shift();
+console.log("1. ", companies);
+
+companies.splice(1, 1, "Ola");
+console.log("2. ", companies);
+
+companies.push("Amazon");
+console.log("3. ", companies);
