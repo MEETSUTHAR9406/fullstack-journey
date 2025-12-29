@@ -97,6 +97,8 @@ for(let price in prices) {
 
 // Question...7
 
+
+/*
 let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
 console.log(companies);
 
@@ -108,3 +110,7 @@ console.log("2. ", companies);
 
 companies.push("Amazon");
 console.log("3. ", companies);
+*/
+
+
+// Question...8
