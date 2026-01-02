@@ -94,9 +94,7 @@ for(let price in prices) {
 }
 */
 
-
 // Question...7
-
 
 /*
 let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
@@ -112,5 +110,49 @@ companies.push("Amazon");
 console.log("3. ", companies);
 */
 
-
 // Question...8
+
+/*
+function countVowels(str) {
+  let count = 0;
+
+  for (const char of str) {
+    if (
+      char === "a" ||
+      char === "e" ||
+      char === "i" ||
+      char === "o" ||
+      char === "u"
+    ) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countVowels("abc"));
+*/
+
+// Question...9
+
+// let nums = [1, 2, 3, 4, 5];
+
+/*
+nums.forEach(function (val, idx) {
+  console.log(val * val);
+});
+*/
+
+/*
+let calcSquare = (val) => {
+  console.log(val, val * val);
+};
+
+nums.forEach(calcSquare);
+*/
+
+/*
+nums.forEach((val) => {
+  console.log(val, val * val);
+});
+*/

@@ -4,7 +4,6 @@
 //     console.log("i = ", i);
 // }
 
-
 // While loop
 
 /* 
@@ -39,6 +38,9 @@ for(let i of str) {
 console.log("String length is ", len);
 */
 
+// For-in loop
+
+/*
 let student = {
     name: "Meet Suthar",
     age: "20",
@@ -49,3 +51,6 @@ let student = {
 for(let val in student) {
     console.log("val = ", val,", value = ", student[val]);
 }
+*/
+
+// For-Each loop
