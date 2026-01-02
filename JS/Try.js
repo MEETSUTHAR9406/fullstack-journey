@@ -156,3 +156,36 @@ nums.forEach((val) => {
   console.log(val, val * val);
 });
 */
+
+// Question...10
+
+/*
+let marks = [87, 92, 42, 64, 16, 26, 75, 23, 96, 98];
+
+let gradeA = marks.filter((val) => {
+  return val >= 90;
+});
+console.log(gradeA);
+*/
+
+// Question...11
+
+let num = prompt("Enter your number: ");
+
+let arr = [];
+for (let i = 1; i <= num; i++) {
+  console.log(arr.push(i));
+  // arr[i - 1] = i; (More effective approach)
+}
+
+console.log(arr);
+
+const sumRes = arr.reduce((prev, curr) => {
+  return prev + curr;
+});
+console.log(sumRes);
+
+const sumProduct = arr.reduce((prev, curr) => {
+  return prev * curr;
+})
+console.log(sumProduct);
