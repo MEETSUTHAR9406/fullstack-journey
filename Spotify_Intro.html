@@ -71,53 +71,157 @@
       </div>
     </div>
   </nav>
+  <div class="main-layout">
+    <aside class="sidebar">
+      <div class="top">
+        <p class="library">Your Library</p>
 
-<aside class="sidebar">
-  <div class="top">
-    <p class="library">Your Library</p>
+        <div class="create-div">
+          <button class="create-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+              <path
+                d="M 15.25 8 a 0.75 0.75 0 0 1 -0.75 0.75 H 8.75 v 5.75 a 0.75 0.75 0 0 1 -1.5 0 V 8.75 H 1.5 a 0.75 0.75 0 0 1 0 -1.5 h 5.75 V 1.5 a 0.75 0.75 0 0 1 1.5 0 v 5.75 h 5.75 a 0.75 0.75 0 0 1 0.75 0.75" />
+            </svg>
+            Create
+          </button>
+        </div>
+      </div>
 
-    <div class="create-div">
-      <button class="create-btn">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
-          <path
-            d="M 15.25 8 a 0.75 0.75 0 0 1 -0.75 0.75 H 8.75 v 5.75 a 0.75 0.75 0 0 1 -1.5 0 V 8.75 H 1.5 a 0.75 0.75 0 0 1 0 -1.5 h 5.75 V 1.5 a 0.75 0.75 0 0 1 1.5 0 v 5.75 h 5.75 a 0.75 0.75 0 0 1 0.75 0.75" />
-        </svg>
-        Create
-      </button>
-    </div>
+      <div class="sidebar-scroll">
+        <div class="playlist">
+          <p class="playlist-line1">Create your first playlist</p>
+          <p class="playlist-line2">It's easy, we'll help you</p>
+          <button class="create-playlist">Create playlist</button>
+        </div>
+
+        <div class="podcast">
+          <p class="podcast-line1">Let's find some podcasts to follow</p>
+          <p class="podcast-line2">We'll keep you updated on new episodes</p>
+          <button class="browse-podcast">Browse podcasts</button>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <ul class="list-items">
+          <li>Legal</li>
+          <li>Safety & Privacy Center</li>
+          <li>Privacy Policy</li>
+          <li>Cookies</li>
+          <li>About Ads</li>
+          <li>Accessibility</li>
+        </ul>
+
+        <p class="cookies">Cookies</p>
+
+        <button class="language-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+            <path
+              d="M 8.152 16 H 8 a 8 8 0 1 1 0.152 0 m -0.41 -14.202 c -0.226 0.273 -0.463 0.713 -0.677 1.323 c -0.369 1.055 -0.626 2.496 -0.687 4.129 h 3.547 c -0.06 -1.633 -0.318 -3.074 -0.687 -4.129 c -0.213 -0.61 -0.45 -1.05 -0.676 -1.323 c -0.194 -0.235 -0.326 -0.285 -0.385 -0.296 h -0.044 c -0.055 0.007 -0.19 0.052 -0.391 0.296 M 4.877 7.25 c 0.062 -1.771 0.34 -3.386 0.773 -4.624 q 0.148 -0.427 0.329 -0.806 a 6.51 6.51 0 0 0 -4.436 5.43 Z m -3.334 1.5 a 6.51 6.51 0 0 0 4.436 5.43 a 8 8 0 0 1 -0.33 -0.806 c -0.433 -1.238 -0.71 -2.853 -0.772 -4.624 Z m 4.835 0 c 0.061 1.633 0.318 3.074 0.687 4.129 c 0.214 0.61 0.451 1.05 0.677 1.323 c 0.202 0.244 0.336 0.29 0.391 0.297 l 0.044 -0.001 c 0.06 -0.01 0.19 -0.061 0.385 -0.296 c 0.226 -0.273 0.463 -0.713 0.676 -1.323 c 0.37 -1.055 0.626 -2.496 0.687 -4.129 Z m 5.048 0 c -0.061 1.771 -0.339 3.386 -0.772 4.624 q -0.123 0.353 -0.268 0.674 a 6.5 6.5 0 0 0 4.071 -5.298 Z m 3.031 -1.5 a 6.51 6.51 0 0 0 -4.071 -5.298 q 0.145 0.322 0.268 0.674 c 0.433 1.238 0.711 2.853 0.772 4.624 Z" />
+          </svg>
+          English
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="scroll-main">
+        <div class="trending">
+          <h2 class="trend-song">Trending Songs</h2>
+          <p class="show-all">Show all</p>
+        </div>
+
+        <div class="album">
+          <div class="song-card">
+            <div class="song-image-wrap">
+              <img src="https://i.scdn.co/image/ab67616d00001e0233bc5d16517fed8db985360c" alt="">
+              <button class="play-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="black">
+                  <path
+                    d="m 7.05 3.606 l 13.49 7.788 a 0.7 0.7 0 0 1 0 1.212 L 7.05 20.394 A 0.7 0.7 0 0 1 6 19.788 V 4.212 a 0.7 0.7 0 0 1 1.05 -0.606" />
+                </svg>
+              </button>
+            </div>
+            <p class="song-title">Raga of Revenge (From "DC")</p>
+            <p class="song-artist"><a href="#">Anirudh Ravichander</a></p>
+          </div>
+
+          <div class="song-card">
+            <div class="song-image-wrap">
+              <img src="https://i.scdn.co/image/ab67616d00001e022ebce2b7f609ae9c7d0bdfc2" alt="">
+              <button class="play-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="black">
+                  <path
+                    d="m 7.05 3.606 l 13.49 7.788 a 0.7 0.7 0 0 1 0 1.212 L 7.05 20.394 A 0.7 0.7 0 0 1 6 19.788 V 4.212 a 0.7 0.7 0 0 1 1.05 -0.606" />
+                </svg>
+              </button>
+            </div>
+            <p class="song-title">No Shortcut</p>
+            <p class="song-artist"><a href="#">Arjan Dhillon</a>, <a href="#">Jay Trak</a></p>
+          </div>
+
+          <div class="song-card">
+            <div class="song-image-wrap">
+              <img src="https://i.scdn.co/image/ab67616d00001e02db055ba83d3809eec4c86527" alt="">
+              <button class="play-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="black">
+                  <path
+                    d="m 7.05 3.606 l 13.49 7.788 a 0.7 0.7 0 0 1 0 1.212 L 7.05 20.394 A 0.7 0.7 0 0 1 6 19.788 V 4.212 a 0.7 0.7 0 0 1 1.05 -0.606" />
+                </svg>
+              </button>
+            </div>
+            <p class="song-title">Rebel</p>
+            <p class="song-artist"><a href="#">Cheema Y</a>, <a href="#">Gur Sidhu</a></p>
+          </div>
+
+          <div class="song-card">
+            <div class="song-image-wrap">
+              <img src="https://i.scdn.co/image/ab67616d00001e02d7b2aa3834b82b1cbe899a48" alt="">
+
+              <button class="play-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="black">
+                  <path
+                    d="m 7.05 3.606 l 13.49 7.788 a 0.7 0.7 0 0 1 0 1.212 L 7.05 20.394 A 0.7 0.7 0 0 1 6 19.788 V 4.212 a 0.7 0.7 0 0 1 1.05 -0.606" />
+                </svg>
+              </button>
+            </div>
+
+            <p class="song-title">On The Floor</p>
+            <p class="song-artist">
+              <a href="#">Jennifer Lopez</a>,
+            <a href="#">Pitbull</a></p>
+          </div>
+
+          <div class="song-card">
+            <div class="song-image-wrap">
+              <img src="https://i.scdn.co/image/ab67616d00001e02bd164e3bbec608aedda85a22" alt="">
+              <button class="play-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="black">
+                  <path
+                    d="m 7.05 3.606 l 13.49 7.788 a 0.7 0.7 0 0 1 0 1.212 L 7.05 20.394 A 0.7 0.7 0 0 1 6 19.788 V 4.212 a 0.7 0.7 0 0 1 1.05 -0.606" />
+                </svg>
+              </button>
+            </div>
+            <p class="song-title">Mashooqa - From "Cocktail 2"</p>
+            <p class="song-artist"><a href="#">Pritam</a>, <a href="#">Mahmood</a>, <a href="#">Amitabh Bhattacharya</a>, ...</p>
+          </div>
+
+          <div class="song-card">
+            <div class="song-image-wrap">
+              <img src="https://i.scdn.co/image/ab67616d00001e02b5c787bfdf4cd4fe6b5ae894" alt="">
+              <button class="play-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="black">
+                  <path
+                    d="m 7.05 3.606 l 13.49 7.788 a 0.7 0.7 0 0 1 0 1.212 L 7.05 20.394 A 0.7 0.7 0 0 1 6 19.788 V 4.212 a 0.7 0.7 0 0 1 1.05 -0.606" />
+                </svg>
+              </button>
+            </div>
+            <p class="song-title">God Mode - From "Karuppu"</p>
+            <p class="song-artist">Sai Abhyankkar, Gana Muthu, Vishnu Edavan</p>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
-
-  <div class="sidebar-scroll">
-    <div class="playlist">
-      <p class="playlist-line1">Create your first playlist</p>
-      <p class="playlist-line2">It's easy, we'll help you</p>
-      <button class="create-playlist">Create playlist</button>
-    </div>
-
-    <div class="podcast">
-      <p class="podcast-line1">Let's find some podcasts to follow</p>
-      <p class="podcast-line2">We'll keep you updated on new episodes</p>
-      <button class="browse-podcast">Browse podcasts</button>
-    </div>
-  </div>
-
-  <div class="sidebar-footer">
-    <ul class="list-items">
-      <li>Legal</li>
-      <li>Safety & Privacy Center</li>
-      <li>Privacy Policy</li>
-      <li>Cookies</li>
-      <li>About Ads</li>
-      <li>Accessibility</li>
-    </ul>
-
-    <p class="cookies">Cookies</p>
-
-    <button class="language-btn">
-      English
-    </button>
-  </div>
-</aside>
 </body>
 
 </html>
