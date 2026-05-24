@@ -54,7 +54,7 @@ body {
 }
 
 .search-bar {
-    width: 480px;
+    width: clamp(260px, 32vw, 480px);
     height: 48px;
     background-color: #1f1f1f;
     border: 2.5px solid transparent;
@@ -172,6 +172,10 @@ body {
     font-weight: 700;
 }
 
+.options p {
+    white-space: nowrap;
+}
+
 .options .premium:hover,
 .support:hover,
 .download:hover {
@@ -200,6 +204,7 @@ body {
     font-weight: 700;
     gap: 8px;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .install-btn:hover {
@@ -212,10 +217,28 @@ body {
     fill: currentColor;
 }
 
+.hamburger-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.hamburger-btn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: white;
+    margin: 5px auto;
+}
+
 .signup {
     color: #b3b3b3;
     font-weight: 600;
     font-size: 14px;
+    white-space: nowrap;
 }
 
 .signup:hover {
@@ -231,6 +254,7 @@ body {
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .login-btn:hover {
@@ -241,7 +265,8 @@ body {
 /* <--------------Sidebar------------> */
 
 .sidebar {
-    width: 28vw;
+    width: clamp(280px, 27.5vw, 526px);
+    flex-shrink: 0;
     height: 100%;
     background-color: #121212;
     border-radius: 8px;
@@ -289,7 +314,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 8px 10px 32px;
+    padding: 18px 20px 32px;
 }
 
 .top .create-btn {
@@ -331,7 +356,8 @@ body {
     border-radius: 12px;
 }
 
-.playlist, .podcast {
+.playlist,
+.podcast {
     padding: 22px 25px;
     border-radius: 8px;
 }
@@ -353,14 +379,13 @@ body {
 .create-playlist {
     position: relative;
     width: fit-content;
-    padding: 8px 18px;
     border: none;
     border-radius: 999px;
     background-color: #fff;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    padding: 6px;
+    padding: 8px 18px;
     margin: 12px;
 }
 
@@ -393,14 +418,13 @@ body {
 .browse-podcast {
     position: relative;
     width: fit-content;
-    padding: 8px 18px;
     border: none;
     border-radius: 999px;
     background-color: #fff;
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    padding: 6px;
+    padding: 8px 18px;
     margin: 12px;
 }
 
@@ -467,33 +491,31 @@ body {
 .main-layout {
     display: flex;
     gap: 10px;
-    height: calc(100vh - 64px - 90px);
+    flex: 1;
+    min-height: 0;
     padding: 8px;
 }
 
 .main-content {
     flex: 1;
+    min-width: 0;
     height: 100%;
     background-color: #121212;
     border-radius: 8px;
-    overflow: hidden;
-}
-
-.scroll-main {
-    height: 100%;
-    overflow-y: auto;
-    padding: 28px 40px;
+    overflow: hidden auto;
+    padding: 14px 40px 0;
 }
 
 .trending {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
+    padding: 20px 10px;
 }
 
 .trend-song {
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 800;
     line-height: 1.2;
     margin: 0;
@@ -507,7 +529,7 @@ body {
 
 .show-all {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 700;
     color: #b3b3b3;
     cursor: pointer;
 }
@@ -527,12 +549,12 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    flex: 0 0 200px;
+    flex: 0 0 clamp(160px, 13vw, 190px);
     padding: 12px;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
 }
 
 .song-card:hover {
@@ -614,24 +636,230 @@ body {
     text-decoration: underline;
 }
 
-.scroll-main::-webkit-scrollbar {
-    width: 10px;
+.artists-class {
+    display: flex;
+    gap: clamp(20px, 3vw, 45px);
+    margin: 20px 0 20px 0;
+    overflow: hidden;
 }
 
-.scroll-main::-webkit-scrollbar-track {
-    background: transparent;
+.artists-class img {
+    width: clamp(130px, 12vw, 150px);
+    height: clamp(130px, 12vw, 150px);
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 8px;
 }
 
-.scroll-main::-webkit-scrollbar-thumb {
-    background: transparent;
-    transition: background 0.3s ease;
+.popular {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
 }
 
-.scroll-main:hover::-webkit-scrollbar-thumb {
-    background: #888;
+.alert-area {
+    background: linear-gradient(90deg, #af2896, #509bf5);
+    border-radius: 8px;
+    margin: 0 8px 8px;
+    flex-shrink: 0;
 }
 
-.scroll-main:hover::-webkit-scrollbar-thumb:hover {
-    background: #555;
+.alert {
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
 }
 
+.texts {
+    line-height: 1.7;
+}
+
+.first {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.signup-footer {
+    width: 190px;
+    padding: 16px 10px;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+@media (max-width: 1100px) {
+    .options {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .install {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 1040px) {
+    .options,
+    .divider-2 {
+        display: none;
+    }
+
+    .install {
+        margin-left: auto;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+}
+
+@media (max-width: 950px) {
+    .nav-bar {
+        gap: 10px;
+        padding-left: 16px;
+    }
+
+    .install-btn .text {
+        display: none;
+    }
+
+    .login-btn {
+        padding: 13px 24px;
+    }
+}
+
+@media (max-width: 849px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .nav-bar {
+        height: 64px;
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .home {
+        width: 44px;
+        height: 44px;
+    }
+
+    .search-bar {
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .search-input,
+    .divider-1,
+    .browse {
+        display: none;
+    }
+
+    .options,
+    .divider-2 {
+        display: none;
+    }
+
+    .hamburger-btn {
+        display: block;
+    }
+
+    .install {
+        gap: 10px;
+        margin-left: auto;
+    }
+
+    .login-btn {
+        padding: 13px 24px;
+    }
+
+    .main-layout {
+        gap: 8px;
+    }
+
+    .sidebar {
+        width: 280px;
+    }
+
+    .main-content {
+        padding: 12px 18px 0;
+    }
+
+    .trending,
+    .popular {
+        padding: 16px 4px;
+    }
+
+    .trend-song {
+        font-size: 24px;
+    }
+
+    .song-card {
+        flex-basis: 160px;
+        padding: 8px;
+    }
+
+    .artists-class img {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .main-layout {
+        display: block;
+        height: auto;
+        min-height: calc(100vh - 64px - 110px);
+        padding: 8px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        min-height: calc(100vh - 64px - 110px);
+    }
+
+    .album {
+        overflow-x: auto;
+    }
+
+    .artists-class {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .install-btn {
+        display: none;
+    }
+
+    .signup {
+        display: none;
+    }
+
+    .login-btn {
+        padding: 12px 20px;
+    }
+
+    .alert {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .signup-footer {
+        width: 100%;
+    }
+}
