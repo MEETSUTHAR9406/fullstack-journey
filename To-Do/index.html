@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">+</div>
+        To-Do
+      </div>
+      <div class="list-container">
+        <div class="sidebar-divider">
+          <div class="add-list-btn" onclick="addList()">+ Add new list</div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <div class="page-title" id="page-title">My Tasks</div>
+        <div class="topbar-actions">
+          <button class="btn-outline" onclick="cycleSort()"> <span id="sort-label">Date</span></button>
+          <button class="btn-primary" onclick="openModal()">+ Add Todo</button>
+        </div>
+      </div>
+      <div class="todos-wrap" id="todos-wrap"></div>
+    </main>
+
+    <aside class="right">
+      <div>
+        <div class="panel-label">Calendar</div>
+        <div class="cal-header">
+          <button class="cal-nav" onclick="prevMonth()">&lt;</button>
+          <div class="cal-title" id="cal-title"></div>
+          <button class="cal-nav" onclick="nextMonth()">&gt;</button>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+        <div id="filter-info" style="min-height: 26px; margin-top: 6px;"></div>
+      </div>
+
+      <div>
+        <div class="panel-label">Overview</div>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-num" id="s-total">0</div><div class="stat-label">Total</div></div>
+          <div class="stat-card"><div class="stat-num" id="s-done" style="color: var(--green);">0</div><div class="stat-label">Completed</div></div>
+          <div class="stat-card"><div class="stat-num" id="s-pending" style="color: var(--amber);">0</div><div class="stat-label">Pending</div></div>
+          <div class="stat-card"><div class="stat-num" id="s-overdue" style="color: var(--red);">0</div><div class="stat-label">Overdue</div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel-label">Progress</div>
+        <div style="background: var(--bg3); border-radius: 20px; height: 8px; overflow: hidden;">
+          <div id="progress-bar" style="height: 100%; background: var(--accent); border-radius: 20px; transition: width .4s ease; width: 0%;"></div>
+        </div>
+
+        <div id="progress-label" style="font-size: 12px; color: var(--text3); margin-top: 5px;">0 of 0 done</div>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
