@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+}
+
+.btn {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #000000;
+    border-radius: 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 1rem;
+}
+
+.pink {
+    background: pink;
+}
+
+.teal {
+    background: teal;
+}
+
+.orange {
+    background: orange;
+}
+
+.purple {
+    background: purple;
+}
+
+.flash {
+    background: white;
+}
+
+.alert {
+    background: red;
+}
